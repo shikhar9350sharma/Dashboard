@@ -22,13 +22,13 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchProfileAndTasks = async () => {
       try {
-        const profileRes = await fetch('http://localhost:3000/check', { credentials: 'include' });
+        const profileRes = await fetch('https://dashboard-backend-2-a1qg.onrender.com/check', { credentials: 'include' });
         if (profileRes.ok) {
           const profileData = await profileRes.json();
           setUserData(profileData);
         }
 
-        const tasksRes = await fetch('http://localhost:3000/tasks', { credentials: 'include' });
+        const tasksRes = await fetch('https://dashboard-backend-2-a1qg.onrender.com/tasks', { credentials: 'include' });
         if (tasksRes.ok) {
           const tasksData = await tasksRes.json();
           setTasks(tasksData);
@@ -50,7 +50,7 @@ const Dashboard = () => {
     if (!newTaskTitle.trim()) return;
 
     try {
-      const response = await fetch('http://localhost:3000/tasks', {
+      const response = await fetch('https://dashboard-backend-2-a1qg.onrender.com/tasks', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
@@ -70,7 +70,7 @@ const Dashboard = () => {
 
   const handleToggleTask = async (taskId, currentStatus) => {
     try {
-      const response = await fetch(`http://localhost:3000/tasks/${taskId}`, {
+      const response = await fetch(`https://dashboard-backend-2-a1qg.onrender.com/tasks/${taskId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
@@ -95,7 +95,7 @@ const Dashboard = () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:3000/tasks/${taskId}`, {
+      const response = await fetch(`https://dashboard-backend-2-a1qg.onrender.com/tasks/${taskId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
@@ -118,7 +118,7 @@ const Dashboard = () => {
 
   const handleDeleteTask = async (taskId) => {
     try {
-      const response = await fetch(`http://localhost:3000/tasks/${taskId}`, {
+      const response = await fetch(`https://dashboard-backend-2-a1qg.onrender.com/tasks/${taskId}`, {
         method: 'DELETE',
         credentials: 'include',
       });
@@ -134,7 +134,7 @@ const Dashboard = () => {
 
   const handleLogout = async () => {
     try {
-      const response = await fetch('http://localhost:3000/logout', { method: 'POST', credentials: 'include' });
+      const response = await fetch('https://dashboard-backend-2-a1qg.onrender.com/logout', { method: 'POST', credentials: 'include' });
       if (response.ok) {
         toast.success('Logout successfully!');
         navigate('/');

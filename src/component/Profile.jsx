@@ -15,7 +15,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await fetch('http://localhost:3000/check', {
+        const response = await fetch('https://dashboard-backend-2-a1qg.onrender.com/check', {
           credentials: 'include',
         });
         if (response.ok) {
@@ -38,7 +38,7 @@ const Profile = () => {
     setIsUpdating(true);
 
     try {
-      const response = await fetch('http://localhost:3000/update-profile', {
+      const response = await fetch('https://dashboard-backend-2-a1qg.onrender.com/update-profile', {
         method: 'PUT', // 👈 PUT request for updating data!
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',

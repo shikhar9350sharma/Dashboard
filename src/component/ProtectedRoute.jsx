@@ -8,7 +8,7 @@ const ProtectedRoute = ({ children }) => {
     const checkAuth = async () => {
       try {
         // Ping your backend to see if the HTTP-only cookie is valid
-        const response = await fetch('http://localhost:3000/check', {
+        const response = await fetch('https://dashboard-backend-2-a1qg.onrender.com/check', {
           credentials: 'include', // Must send the cookie!
         });
 

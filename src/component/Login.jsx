@@ -22,7 +22,7 @@ const Login = () => {
     setIsLoading(true); 
     
     try {
-      const response = await fetch('http://localhost:3000/login', {
+      const response = await fetch('https://dashboard-backend-2-a1qg.onrender.com/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
