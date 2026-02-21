@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'; 
 import 'react-toastify/dist/ReactToastify.css'; 
 
-import Login from './component/login'
+import Login from './component/Login'
 import Register from './component/Register'
 import Dashboard from './component/Dashboard'
 import ProtectedRoute from './component/ProtectedRoute' // 👈 Import it here
