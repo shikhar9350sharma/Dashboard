@@ -189,7 +189,7 @@ const Dashboard = () => {
           </div>
 
           {/* Task Manager (Right) */}
-          <div className="md:col-span-2 bg-white rounded-2xl shadow-lg p-6">
+          <div className="md:col-span-2 bg-white rounded-2xl shadow-lg p-4 md:p-6">
             <h2 className="text-2xl font-bold text-gray-800 mb-6">My Tasks</h2>
             
             <form onSubmit={handleAddTask} className="flex gap-2 mb-8">
